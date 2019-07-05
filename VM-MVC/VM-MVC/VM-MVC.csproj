@@ -230,6 +230,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IRepository\VM.IRepository.csproj">
+      <Project>{e6010126-4a90-4386-b47f-8a2a6381421b}</Project>
+      <Name>VM.IRepository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository\VM.Repository.csproj">
       <Project>{e80ad7e4-081a-493a-b84d-9027cd81fbcf}</Project>
       <Name>VM.Repository</Name>

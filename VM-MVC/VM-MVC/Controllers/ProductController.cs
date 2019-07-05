@@ -18,6 +18,18 @@ namespace VM_MVC.Controllers
             this.ProductService = productService;
             this.AddDisposableObject(productService);
         }
+        //public ActionResult Index()
+        //{
+        //    int pageIndex = 1;
+        //    int recordCount;
+        //    IEnumerable<GeneralMovieInfo> movies = this.ProductService
+        //        .GetMovies(pageIndex, PagingInfo.PageSize, out recordCount)
+        //        .Select(p => GeneralMovieInfo.FromProduct(p));
+        //    Func<int, UrlHelper, string> pageUrlAccessor = (CurrentPage, helper) =>
+        //        helper.RouteUrl("Page", new { PageIndex = CurrentPage }).ToString();
+        //    ViewBag.Title = "Video Mall";
+        //    return RenderMovieList(movies, recordCount, pageIndex, pageUrlAccessor);
+        //}
         /// <summary>
         /// 影片列表
         /// </summary>

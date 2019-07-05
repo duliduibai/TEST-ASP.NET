@@ -56,7 +56,8 @@ namespace VM_MVC
     {
         public static int PageSize
         {
-            get { return int.Parse(ConfigurationManager.AppSettings["pageSize"]); }
+            //get { return int.Parse(ConfigurationManager.AppSettings["pageSize"]); }
+            get { return 5; }
         }
 
         public int RecordCount { get; set; }

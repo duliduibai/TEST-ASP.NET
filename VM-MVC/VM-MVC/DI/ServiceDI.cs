@@ -11,7 +11,7 @@ namespace VM_MVC.DI
     {
         public static void RegisterService(this ContainerBuilder builder)
         {
-            builder.RegisterType<ProductService>().InstancePerRequest();
+            builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
         }
     }
 }
