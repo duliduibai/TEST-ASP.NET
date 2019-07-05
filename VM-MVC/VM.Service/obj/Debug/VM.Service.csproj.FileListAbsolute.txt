@@ -1,0 +1,12 @@
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Service.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Service.pdb
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csprojAssemblyReference.cache
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csproj.CoreCompileInputs.cache
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.pdb
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.IRepository.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.IRepository.pdb
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.pdb
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.dll.config
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csproj.CopyComplete

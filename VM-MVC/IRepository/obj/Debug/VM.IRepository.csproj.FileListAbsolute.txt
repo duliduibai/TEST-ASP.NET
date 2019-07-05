@@ -1,0 +1,10 @@
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\bin\Debug\VM.IRepository.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\bin\Debug\VM.IRepository.pdb
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\bin\Debug\VM.Entity.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\bin\Debug\VM.Entity.pdb
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\bin\Debug\VM.Entity.dll.config
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csprojAssemblyReference.cache
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csproj.CoreCompileInputs.cache
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csproj.CopyComplete
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.dll
+C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.pdb
