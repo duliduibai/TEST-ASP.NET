@@ -17,7 +17,7 @@ namespace VM_MVC
             routes.MapRoute(
                 name: "Home",
                 url: "",
-                defaults: new { controller = "Prodcut", action = "Index", pageIndex = 1 });
+                defaults: new { controller = "Product", action = "Index", pageIndex = 1 });
 
             ///主页（影片列表【第n页】）
             ///TODO:???

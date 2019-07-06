@@ -8,3 +8,13 @@ C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IReposito
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csproj.CopyComplete
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.dll
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.pdb
+E:\TEST-ASP.NET\VM-MVC\IRepository\bin\Debug\VM.IRepository.dll
+E:\TEST-ASP.NET\VM-MVC\IRepository\bin\Debug\VM.IRepository.pdb
+E:\TEST-ASP.NET\VM-MVC\IRepository\bin\Debug\VM.Entity.dll
+E:\TEST-ASP.NET\VM-MVC\IRepository\bin\Debug\VM.Entity.pdb
+E:\TEST-ASP.NET\VM-MVC\IRepository\bin\Debug\VM.Entity.dll.config
+E:\TEST-ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csprojAssemblyReference.cache
+E:\TEST-ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csproj.CoreCompileInputs.cache
+E:\TEST-ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.csproj.CopyComplete
+E:\TEST-ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.dll
+E:\TEST-ASP.NET\VM-MVC\IRepository\obj\Debug\VM.IRepository.pdb

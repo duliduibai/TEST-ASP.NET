@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html>
 
 <html>
-    <head>
-        <title>@ViewBag.Title</title>
-        <link rel="stylesheet" href="~/Content/Site.css"/>
-    </head>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/mysheet.css" />
+</head>
 
     <body>
         <div class="page">
@@ -18,16 +19,16 @@
                         <img src="@Url.Content("~/Content/Images/members.png")" alt="" class="icon"/>
                         @if (this.Request.IsAuthenticated)
                         {
-                            @Html.RouteLink("注销", "Logout", null, new { @class = "iconText" });
+                            @Html.RouteLink("注销", "Logout", null, new { @class = "iconText" })
                         }
                         else
                         {
-                            @Html.RouteLink("登陆", "Login", null, new { @class = "iconText" });
+                            @Html.RouteLink("登陆", "Login", null, new { @class = "iconText" })
                         }
                     </li>
                     <li class="nav">
                         <img src="@Url.Content("~/Content/Images/cart.png")" alt="" class="icon"/>
-                        @Html.RouteLink("购物车", "ShoppingCart", null, new { @class = "iconText" });
+                        @Html.RouteLink("购物车", "ShoppingCart", null, new { @class = "iconText" })
                     </li>
                 </ul>
             </div>

@@ -13,6 +13,7 @@ namespace VM_MVC.DI
         public static void RegisterRepository(this ContainerBuilder builder)
         {
             builder.RegisterType<ProductRepository>().As<IProductRepository>().InstancePerRequest();
+            builder.RegisterType<OrderRepository>().As<IOrderRepository>().InstancePerRequest();
             builder.RegisterType<VmDbContext>().InstancePerDependency();
         }
     }

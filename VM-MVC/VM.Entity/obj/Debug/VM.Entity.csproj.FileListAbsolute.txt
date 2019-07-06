@@ -10,3 +10,15 @@ C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.cspr
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.dll
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.pdb
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.csprojAssemblyReference.cache
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\VM.Entity.dll.config
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\VM.Entity.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\VM.Entity.pdb
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\EntityFramework.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\EntityFramework.xml
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.csprojAssemblyReference.cache
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.csproj.CoreCompileInputs.cache
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.csproj.CopyComplete
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.pdb

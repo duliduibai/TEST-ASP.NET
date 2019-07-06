@@ -10,12 +10,17 @@ namespace VM_MVC
 {
     public static class HtmlUrlHelperExtensions
     {
+        const string StrSpace = "<span>&nbsp;</span>";
         public static MvcHtmlString PageLinks(this HtmlHelper html,
             PagingInfo pagingInfo, Func<int, string> pageUrlAccessor)
         {
             StringBuilder result = new StringBuilder();
-            for (int i = 0; i < pagingInfo.PageCount; i++)
+            for (int i = 1; i <= pagingInfo.PageCount; i++)
             {
+                if (1 != i)
+                {
+                    result.Append(StrSpace);
+                }
                 TagBuilder tag = new TagBuilder("a");
                 tag.MergeAttribute("href", pageUrlAccessor(i));
                 tag.InnerHtml = i.ToString();
@@ -35,8 +40,9 @@ namespace VM_MVC
             {
                 sb.Append(String.Format("<span><a href = '{0}'>{1}</a></span>",
                     helper.RouteUrl("GenreHome", new { Genre = genre }), genre));
+                sb.Append(StrSpace);
             }
-            return MvcHtmlString.Create(sb.ToString());
+            return MvcHtmlString.Create(sb.ToString().Remove(sb.Length - StrSpace.Length)); 
         }
         public static MvcHtmlString ActorLinks(this UrlHelper helper,
             IEnumerable<string> acotrs)
@@ -46,8 +52,9 @@ namespace VM_MVC
             {
                 sb.Append(String.Format("<span><a href = '{0}'>{1}</a></span>",
                     helper.RouteUrl("ActorHome", new { Actor = actor }), actor));
+                sb.Append(StrSpace);
             }
-            return MvcHtmlString.Create(sb.ToString());
+            return MvcHtmlString.Create(sb.ToString().Remove(sb.Length - StrSpace.Length));
         }
     }
 

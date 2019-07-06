@@ -10,3 +10,15 @@ C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.IRepositor
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.pdb
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.dll.config
 C:\Users\bchen7\Desktop\VSCode\ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csproj.CopyComplete
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Service.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Service.pdb
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.IRepository.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.IRepository.pdb
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.pdb
+E:\TEST-ASP.NET\VM-MVC\VM.Service\bin\Debug\VM.Entity.dll.config
+E:\TEST-ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csprojAssemblyReference.cache
+E:\TEST-ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csproj.CoreCompileInputs.cache
+E:\TEST-ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.csproj.CopyComplete
+E:\TEST-ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.dll
+E:\TEST-ASP.NET\VM-MVC\VM.Service\obj\Debug\VM.Service.pdb

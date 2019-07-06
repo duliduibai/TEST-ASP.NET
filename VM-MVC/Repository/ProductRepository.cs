@@ -28,15 +28,17 @@ namespace VM.Repository
 
         public IEnumerable<Product> GetProductsByActor(string actor, int pageIndex, int pageSize, out int recordCount)
         {
-            recordCount = this.DbSet.Count();
-            return this.Get(p => p.Starring.Contains(actor) || p.SupportingActors.Contains(actor)
+            var sql = this.Get(p => p.Starring.Contains(actor) || p.SupportingActors.Contains(actor)
                 , pageIndex, pageSize, p => p.ReleaseYear, false);
+            recordCount = sql.Count();
+            return sql;
         }
 
         public IEnumerable<Product> GetProductsByGenre(string genre, int pageIndex, int pageSize, out int recordCount)
         {
-            recordCount = this.DbSet.Count();
-            return this.Get(p => p.Genre.Contains(genre), pageIndex, pageSize, p => p.ReleaseYear, false);
+            var sql = this.Get(p => p.Genre.Contains(genre), pageIndex, pageSize, p => p.ReleaseYear, false);
+            recordCount = sql.Count();
+            return sql;
         }
     }
 

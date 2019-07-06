@@ -33,7 +33,7 @@ namespace VM.Service.ProductDB
 
         public IEnumerable<Product> GetMoviesByGenre(string genre, int pageIndex, int pageSize, out int recordCount)
         {
-            return db.GetProductsByActor(genre, pageIndex, pageSize, out recordCount);
+            return db.GetProductsByGenre(genre, pageIndex, pageSize, out recordCount);
         }
 
         public int GetStock(string proId)

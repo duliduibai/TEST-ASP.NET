@@ -8,8 +8,7 @@
         RecordCount = (int)ViewBag.RecordCount
     };
 
-    Func<int, UrlHelper, string> pageUrlAccessor =
-        (Func<int, UrlHelper, string>)ViewBag.PageUrlAccessor;
+    Func<int, UrlHelper, string> pageUrlAccessor = (Func<int, UrlHelper, string>)ViewBag.PageUrlAccessor;
 }
 
 <div class="paging">
@@ -20,12 +19,12 @@
     @foreach(GeneralMovieInfo movie in this.Model)
     {
         <li>
-            @Html.DisplayFor(m => movie);
+            @Html.DisplayFor(m => movie)
         </li>
     }
 </ul>
 
 <div class="paging">
-    @Html.PageLinks(pagingInfo, pageIndex => pageUrlAccessor(pageIndex, Url));
+    @Html.PageLinks(pagingInfo, pageIndex => pageUrlAccessor(pageIndex, Url))
 </div>
 

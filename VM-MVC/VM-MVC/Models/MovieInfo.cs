@@ -52,6 +52,7 @@ namespace VM_MVC.Models
         public string ProductCompany { get; set; }
         [DisplayName("上映年份")]
         public int ReleaseYear { get; set; }
+        [DisplayName("语言")]
         public string Language { get; set; }
         [DisplayName("片长")]
         public int RunTime { get; set; }

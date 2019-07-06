@@ -39,6 +39,7 @@ namespace VM_MVC.Models
         public string Director { get; set; }
         [DisplayName("上映年份")]
         public int ReleaseYear { get; set; }
+        [DisplayName("语言")]
         public string Language { get; set; }
         [DisplayName("单价")]
         public decimal Price { get; set; }

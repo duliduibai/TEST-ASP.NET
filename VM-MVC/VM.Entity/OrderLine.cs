@@ -21,7 +21,7 @@ namespace VM.Entity
         /// <summary>
         /// 订购数量
         /// </summary>
-        public int Quantity { get; set; }
+        public decimal Quantity { get; set; }
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
 

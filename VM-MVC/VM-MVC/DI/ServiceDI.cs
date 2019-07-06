@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using VM.Service.OrderDB;
 using VM.Service.ProductDB;
 
 namespace VM_MVC.DI
@@ -12,6 +13,7 @@ namespace VM_MVC.DI
         public static void RegisterService(this ContainerBuilder builder)
         {
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerRequest();
+            builder.RegisterType<OrderService>().As<IOrderService>().InstancePerRequest();
         }
     }
 }

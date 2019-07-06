@@ -48,6 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase\VMInitializer.cs" />
+    <Compile Include="Migrations\201907052328462_InitialCreate.cs" />
+    <Compile Include="Migrations\201907052328462_InitialCreate.Designer.cs">
+      <DependentUpon>201907052328462_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907060309584_OrderLine.cs" />
+    <Compile Include="Migrations\201907060309584_OrderLine.Designer.cs">
+      <DependentUpon>201907060309584_OrderLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="DataBase\VmRepository.cs" />
@@ -68,6 +78,14 @@
       <Project>{c668396a-6b39-4067-aba3-219329c4f000}</Project>
       <Name>VM.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201907052328462_InitialCreate.resx">
+      <DependentUpon>201907052328462_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907060309584_OrderLine.resx">
+      <DependentUpon>201907060309584_OrderLine.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
