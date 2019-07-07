@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Security;
 using VM_MVC.DI;
 
 namespace VM_MVC
@@ -22,6 +23,18 @@ namespace VM_MVC
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            CreateDefaultUser();
+        }
+
+        public static void CreateDefaultUser()
+        {
+            string userName = "Boone";
+            string passWord = "123456";
+            if (Membership.FindUsersByName(userName).Count == 0)
+            {
+                Membership.CreateUser(userName, passWord, "Boone@163.com");
+            }
         }
     }
 }

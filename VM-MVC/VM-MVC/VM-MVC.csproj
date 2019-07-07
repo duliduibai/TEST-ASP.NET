@@ -160,6 +160,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="DI\DependencyInjection.cs" />
@@ -170,6 +171,7 @@
     </Compile>
     <Compile Include="HtmlUrlHelperExtensions.cs" />
     <Compile Include="Models\GeneralMovieInfo.cs" />
+    <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Models\MovieInfo.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\ShoppingCartBinder.cs" />
@@ -218,6 +220,7 @@
     <Content Include="Views\Product\MovieList.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Order\ShoppingCart.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
