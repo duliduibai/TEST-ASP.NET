@@ -4,60 +4,85 @@
     ViewBag.Title = "ShoppingCart";
 }
 
+<h2>ShoppingCart</h2>
+
 <div class="ShoppingCart">
-    <table cellspacing="0">
+    <table id="testTableID" class="myTable" cellspacing="0">
         <tr>
             <th>片名</th>
             <th>单价</th>
             <th>数量</th>
             <th>金额</th>
+            <th class="removeCol"></th>
         </tr>
-        @foreach(ShoppingCartItem item in this.Model.Items)
+        @foreach (ShoppingCartItem item in this.Model.Items)
         {
             <tr>
-                <td>@Html.RouteLink(item.ProductName, "ProductDetail",
-                    new
-                    {
-                        ProductName = item.ProductName,
-                        ProductId = item.ProductId
-                    })
-                </td>
                 <td>
-                    ￥@item.Price.ToString("#0.00")
-                </td>
-                <td>@item.Quantity</td>
-                <td>￥@item.SubTotalPrice.ToString("#0.00")</td>
-                <td>
-                    <form action="@Url.RouteUrl("Remove")" method="post">
-                        @* TODO: Hidden有什么用 *@
-                        @Html.Hidden("ProductId", item.ProductId)
-                        <input type="submit" value="" class="remove"/>
-                    </form>
-                </td>
-            </tr>
-        }
-        <tr>
-            <td colspan="3"></td>
-            <td><b>总价：￥@this.Model.TotalPrice.ToString("#0.00")</b></td>
+                    @Html.RouteLink(item.ProductName, "ProductDetail",
+                new
+                {
+                    ProductName = item.ProductName,
+                    ProductId = item.ProductId
+                })
+            </td>
+            <td>
+                ￥@item.Price.ToString("#0.00")
+            </td>
+            <td>@item.Quantity</td>
+            <td>￥@item.SubTotalPrice.ToString("#0.00")</td>
+            <td>
+                <form action="@Url.RouteUrl("Remove")" method="post">
+                    @* TODO: Hidden有什么用 *@
+                    @Html.Hidden("ProductId", item.ProductId)
+                    <input class="buttonInput" type="submit" value="Remvoe" class="remove" />
+                </form>
+            </td>
         </tr>
+    }
+            <tr>
+                <td colspan="3"></td>
+                <td><b>总价:</b></td>
+                <td><b>￥@this.Model.TotalPrice.ToString("#0.00")</b></td>
+            </tr>
     </table>
     <div class="left">
         @Html.ValidationSummary()<div style="clear: both"></div>
     </div>
     <div class="right">
         <div>
-            <img src="@Url.Content("~/Content/images/continueshopping.png")" alt=""/>
+            <img src="@Url.Content("~/Content/images/continueshopping.png")" alt="" />
             @Html.RouteLink("继续购物", "Home")
         </div>
-        @if(ShoppingCartBinder.GetShoppingCart().TotalQuantiy > 0)
+        @if (ShoppingCartBinder.GetShoppingCart().TotalQuantiy > 0)
         {
             <div>
-                <img src="@Url.Content("~/Content/images/payment.png")" alt=""/>
+                <img src="@Url.Content("~/Content/images/payment.png")" alt="" />
                 @Html.RouteLink("结账支付", "CheckOut")
             </div>
         }
     </div>
 </div>
 
-<h2>ShoppingCart</h2>
+<script>
+    function altRows(id) {
+        if (document.getElementById) {
+
+            var table = document.getElementById(id);
+            var rows = table.getElementsByTagName("tr");
+
+            for (i = 0; i < rows.length; i++) {
+                if (i % 2 == 0) {
+                    rows[i].className = "evenrowcolor";
+                } else {
+                    rows[i].className = "oddrowcolor";
+                }
+            }
+        }
+    }
+
+    window.onload = function () {
+        altRows('testTableID');
+    }
+</script>
 

@@ -35,9 +35,12 @@ namespace VM_MVC.Controllers
 
         [HttpPost]
         public ActionResult ShoppingCart(string productId, string productName, 
-            decimal price, [ModelBinder(typeof(ShoppingCartBinder))] ShoppingCart shoppingCart, int number = 1)
+            decimal price, [ModelBinder(typeof(ShoppingCartBinder))] ShoppingCart shoppingCart, int number = 0)
         {
-            shoppingCart.Add(productId, productName, price, number);
+            if (number != 0)
+            {
+                shoppingCart.Add(productId, productName, price, number);
+            }
             return View(ShoppingCartBinder.GetShoppingCart());
         }
 

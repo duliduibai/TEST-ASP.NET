@@ -24,17 +24,6 @@ namespace VM_MVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            CreateDefaultUser();
-        }
-
-        public static void CreateDefaultUser()
-        {
-            string userName = "Boone";
-            string passWord = "123456";
-            if (Membership.FindUsersByName(userName).Count == 0)
-            {
-                Membership.CreateUser(userName, passWord, "Boone@163.com");
-            }
         }
     }
 }

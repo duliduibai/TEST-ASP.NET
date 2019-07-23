@@ -29,6 +29,7 @@ namespace VM_MVC.Controllers
             IEnumerable<GeneralMovieInfo> movies = this.ProductService
                 .GetMovies(pageIndex, PagingInfo.PageSize, out recordCount)
                 .Select(p => GeneralMovieInfo.FromProduct(p));
+            var temp = movies.ToList();
             Func<int, UrlHelper, string> pageUrlAccessor = (CurrentPage, helper) => 
                 helper.RouteUrl("Page", new { PageIndex = CurrentPage }).ToString();
             ViewBag.Title = "Video Mall";

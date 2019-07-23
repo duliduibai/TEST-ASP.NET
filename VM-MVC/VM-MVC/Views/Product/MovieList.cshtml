@@ -11,9 +11,9 @@
     Func<int, UrlHelper, string> pageUrlAccessor = (Func<int, UrlHelper, string>)ViewBag.PageUrlAccessor;
 }
 
-<div class="paging">
+@*<div class="paging">
     @Html.PageLinks(pagingInfo, pageIndex=>pageUrlAccessor(pageIndex, Url))
-</div>
+</div>*@
 
 <ul class="products">
     @foreach(GeneralMovieInfo movie in this.Model)

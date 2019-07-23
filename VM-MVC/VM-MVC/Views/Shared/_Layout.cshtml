@@ -9,28 +9,34 @@
 
     <body>
         <div class="page">
-            <div class="header">
-                <ul class="nav">
-                    <li class="nav first">
-                        <img src="@Url.Content("~/Content/Images/home.png")" alt="" class="icon"/>
-                        @Html.RouteLink("主页", "Home", null, new { @class = "iconText"})
-                    </li>
-                    <li class="nav">
-                        <img src="@Url.Content("~/Content/Images/members.png")" alt="" class="icon"/>
-                        @if (this.Request.IsAuthenticated)
-                        {
-                            @Html.RouteLink("注销", "Logout", null, new { @class = "iconText" })
-                        }
-                        else
-                        {
-                            @Html.RouteLink("登陆", "Login", null, new { @class = "iconText" })
-                        }
-                    </li>
-                    <li class="nav">
-                        <img src="@Url.Content("~/Content/Images/cart.png")" alt="" class="icon"/>
-                        @Html.RouteLink("购物车", "ShoppingCart", null, new { @class = "iconText" })
-                    </li>
-                </ul>
+            <div id="MainMenu">
+                <div id="tab">
+                    <ul class="menu">
+                        <li class="item_active">
+                            <img src="@Url.Content("~/Content/Images/home.png")" alt="" class="icon" />
+                            <a href="@Url.RouteUrl("Home")"><span>主页</span></a>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="@Url.Content("~/Content/Images/members.png")" alt="" class="icon" />
+                                @if (this.Request.IsAuthenticated)
+                                {
+                                    <a href="@Url.RouteUrl("Logout")"><span>注销</span></a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.RouteUrl("Login")"><span>登陆</span></a>
+                                }
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="@Url.Content("~/Content/Images/cart.png")" alt="" class="icon" />
+                                <a href="@Url.RouteUrl("ShoppingCart")"><span>购物车</span></a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="main">@RenderBody()</div>
             <div class="footer">

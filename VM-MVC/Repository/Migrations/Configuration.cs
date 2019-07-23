@@ -10,7 +10,6 @@ namespace VM.Repository.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "VM.Repository.VmDbContext";
         }
 
         protected override void Seed(VM.Repository.VmDbContext context)
