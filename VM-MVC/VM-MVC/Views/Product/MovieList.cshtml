@@ -16,11 +16,12 @@
 </div>*@
 
 <ul class="products">
-    @foreach(GeneralMovieInfo movie in this.Model)
+    @foreach (GeneralMovieInfo movie in this.Model)
     {
         <li>
             @Html.DisplayFor(m => movie)
         </li>
+        <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="100%" color=#987cb9 SIZE=2>
     }
 </ul>
 

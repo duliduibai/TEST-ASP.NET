@@ -4,8 +4,6 @@
     ViewBag.Title = "ShoppingCart";
 }
 
-<h2>ShoppingCart</h2>
-
 <div class="ShoppingCart">
     <table id="testTableID" class="myTable" cellspacing="0">
         <tr>
@@ -35,7 +33,7 @@
                 <form action="@Url.RouteUrl("Remove")" method="post">
                     @* TODO: Hidden有什么用 *@
                     @Html.Hidden("ProductId", item.ProductId)
-                    <input class="buttonInput" type="submit" value="Remvoe" class="remove" />
+                    <input class="buttonInput remove" type="submit" value="Remvoe" />
                 </form>
             </td>
         </tr>

@@ -8,7 +8,7 @@
     @{ 
         MvcHtmlString htmlString = new MvcHtmlString(Model.Story);
     }
-    <img src="@Url.Content(Model.Poster)" class="poster" alt="@Model.Name"/>
+    <img src="@Url.Content("~/images/" + Model.Poster)" class="poster" alt="@Model.Name"/>
     <div class="title">@Model.Name</div>
 </div>
 

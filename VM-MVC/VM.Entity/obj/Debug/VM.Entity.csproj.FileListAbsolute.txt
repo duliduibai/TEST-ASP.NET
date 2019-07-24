@@ -33,3 +33,4 @@ C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity
 C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.csproj.CopyComplete
 C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.dll
 C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.pdb
+C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\VM.Entity\obj\Debug\VM.Entity.csprojAssemblyReference.cache

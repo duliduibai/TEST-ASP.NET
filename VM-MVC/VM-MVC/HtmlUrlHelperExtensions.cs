@@ -61,11 +61,7 @@ namespace VM_MVC
 
     public class PagingInfo
     {
-        public static int PageSize
-        {
-            //get { return int.Parse(ConfigurationManager.AppSettings["pageSize"]); }
-            get { return 5; }
-        }
+        public static int PageSize => 4;
 
         public int RecordCount { get; set; }
         public int PageIndex { get; set; }
