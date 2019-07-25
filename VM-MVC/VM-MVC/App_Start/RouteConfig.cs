@@ -39,6 +39,10 @@ namespace VM_MVC
                 url: "Genre/{genre}/Page{pageIndex}",
                 defaults: new { controller = "Product", action = "Genre", pageIndex = 1 });
 
+            routes.MapRoute(
+                name: "AddToCart",
+                url: "Product/AddToCart",
+                defaults: new { controller = "Product", action = "AddToCart" });
 
             ///由指定演员参演的影片列表（第1页）
             routes.MapRoute(
@@ -57,7 +61,6 @@ namespace VM_MVC
                 url: "{productName}/{productId}",
                 defaults: new { controller = "Product", action = "Detail" },
                 constraints: new { httpMethod = new HttpMethodConstraint("GET") });
-
             ///购物车
             routes.MapRoute(
                 name: "ShoppingCart",
@@ -70,6 +73,11 @@ namespace VM_MVC
                 url: "ShoppingCart/Remove",
                 defaults: new { controller = "Order", action = "Remove" },
                 constraints: new { httpMethod = new HttpMethodConstraint("POST") });
+
+            routes.MapRoute(
+                name: "AddMovie",
+                url: "ShoppingCart/Add",
+                defaults: new { controller = "Order", action = "Add" });
 
             ///结账支付
             routes.MapRoute(

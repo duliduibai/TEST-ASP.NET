@@ -32,17 +32,7 @@ namespace VM_MVC.Controllers
             ///TODO:Model Binder是什么？？？
             return View(shoppingCart);
         }
-
-        [HttpPost]
-        public ActionResult ShoppingCart(string productId, string productName, 
-            decimal price, [ModelBinder(typeof(ShoppingCartBinder))] ShoppingCart shoppingCart, int number = 0)
-        {
-            if (number != 0)
-            {
-                shoppingCart.Add(productId, productName, price, number);
-            }
-            return View(ShoppingCartBinder.GetShoppingCart());
-        }
+    
 
         [HttpPost]
         public ActionResult Remove(string productId, 
@@ -54,6 +44,23 @@ namespace VM_MVC.Controllers
                 shoppingCart.Items.Remove(item);
             }
             return RedirectToAction("ShoppingCart");
+        }
+
+        public decimal Add(string productId, [ModelBinder(typeof(ShoppingCartBinder))] ShoppingCart shoppingCart, int number)
+        {
+            ShoppingCartItem item = shoppingCart.Items.FirstOrDefault(m => m.ProductId == productId);
+            if (null != item)
+            {
+                if (item.Quantity + number < 0)
+                {
+                    item.Quantity = 0;
+                }
+                else
+                {
+                    item.Quantity += number;
+                }
+            }
+            return item == null ? 0 : item.Quantity;
         }
 
         [Authorize]

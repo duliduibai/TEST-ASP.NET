@@ -2,12 +2,15 @@
 @model ShoppingCart
 @{
     ViewBag.Title = "ShoppingCart";
+    ViewBag.MovieIndexInCart = 0;
+    int changedIndex = 1;
+    int numberToAdd = 0;
 }
 
 <div class="ShoppingCart">
     <table id="testTableID" class="myTable" cellspacing="0">
         <tr>
-            <th>片名</th>
+            <th id="MovieName">片名</th>
             <th>单价</th>
             <th>数量</th>
             <th>金额</th>
@@ -15,34 +18,39 @@
         </tr>
         @foreach (ShoppingCartItem item in this.Model.Items)
         {
+            ViewBag.MovieIndexInCart += 1;
             <tr>
                 <td>
                     @Html.RouteLink(item.ProductName, "ProductDetail",
-                new
-                {
-                    ProductName = item.ProductName,
-                    ProductId = item.ProductId
-                })
-            </td>
-            <td>
-                ￥@item.Price.ToString("#0.00")
-            </td>
-            <td>@item.Quantity</td>
-            <td>￥@item.SubTotalPrice.ToString("#0.00")</td>
-            <td>
-                <form action="@Url.RouteUrl("Remove")" method="post">
-                    @* TODO: Hidden有什么用 *@
-                    @Html.Hidden("ProductId", item.ProductId)
-                    <input class="buttonInput remove" type="submit" value="Remvoe" />
-                </form>
-            </td>
-        </tr>
-    }
-            <tr>
-                <td colspan="3"></td>
-                <td><b>总价:</b></td>
-                <td><b>￥@this.Model.TotalPrice.ToString("#0.00")</b></td>
+new
+{
+    ProductName = item.ProductName,
+    ProductId = item.ProductId
+})
+                </td>
+                <td>
+                    ￥@item.Price.ToString("#0.00")
+                </td>
+                <td>
+                    <input class="buttonInput addNumber" id="sub@(ViewBag.MovieIndexInCart)" type="button" value="-" />
+                    <input id="movieNumber@(ViewBag.MovieIndexInCart)" value="@item.Quantity" disabled />
+                    <input class="buttonInput addNumber" id="sub@(ViewBag.MovieIndexInCart)" type="button" value="+" />
+                    <input type="text" id="proId" contenteditable="false" value="@item.ProductId" hidden />
+                </td>
+                <td>￥@item.SubTotalPrice.ToString("#0.00")</td>
+                <td>
+                    <form action="@Url.RouteUrl("Remove")" method="post">
+                        @Html.Hidden("ProductId", item.ProductId)
+                        <input class="buttonInput remove" type="submit" value="Remvoe" />
+                    </form>
+                </td>
             </tr>
+        }
+        <tr>
+            <td colspan="3"></td>
+            <td><b>总价:</b></td>
+            <td><b>￥@this.Model.TotalPrice.ToString("#0.00")</b></td>
+        </tr>
     </table>
     <div class="left">
         @Html.ValidationSummary()<div style="clear: both"></div>
@@ -63,12 +71,34 @@
 </div>
 
 <script>
+    function Init() {
+        var eles = document.getElementsByClassName("addNumber");
+        for (var i = 0; i < eles.length; i++) {
+            eles[i].onclick = function () {
+                changedIndex = this.id.substring(3);
+                numberToAdd = this.id.startsWith("sub") ? -1 : 1;
+                $.post(
+                    "@Url.RouteUrl("AddMovie")",
+                    { 
+                        productId: "1", number: 1 
+                    },
+                    function () {
+                        var temp = document.getElementById("movieNumber" + changedIndex);
+                        temp.value = parseInt(temp.value) + numberToAdd;
+                    }
+                )
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        Init();
+    })
     function altRows(id) {
         if (document.getElementById) {
 
             var table = document.getElementById(id);
             var rows = table.getElementsByTagName("tr");
-
             for (i = 0; i < rows.length; i++) {
                 if (i % 2 == 0) {
                     rows[i].className = "evenrowcolor";

@@ -13,6 +13,8 @@ namespace VM_MVC.Controllers
     {
         public IProductService ProductService { get; private set; }
 
+        private static int pageIndex { get; set; }
+
         public ProductController(IProductService productService)
         {
             this.ProductService = productService;
@@ -25,6 +27,7 @@ namespace VM_MVC.Controllers
         /// <returns></returns>
         public ActionResult Index(int pageIndex = 1)
         {
+            ProductController.pageIndex = pageIndex;
             int recordCount;
             IEnumerable<GeneralMovieInfo> movies = this.ProductService
                 .GetMovies(pageIndex, PagingInfo.PageSize, out recordCount)
@@ -107,6 +110,17 @@ namespace VM_MVC.Controllers
             ViewBag.PageIndex = pageIndex;
             ViewBag.PageUrlAccessor = pageUrlAccessor;
             return result;
+        }
+
+        [HttpPost]
+        public ActionResult AddToCart(string productId, string productName,
+            decimal price, [ModelBinder(typeof(ShoppingCartBinder))] ShoppingCart shoppingCart, int number = 0)
+        {
+            if (number != 0)
+            {
+                shoppingCart.Add(productId, productName, price, number);
+            }
+            return Index(pageIndex);
         }
     }
 }

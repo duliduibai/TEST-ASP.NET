@@ -24,12 +24,13 @@ namespace VM_MVC
                 TagBuilder tag = new TagBuilder("a");
                 tag.MergeAttribute("href", pageUrlAccessor(i));
                 tag.InnerHtml = i.ToString();
-                if (i == pagingInfo.PageIndex)
+                if (i == pagingInfo.PageIndex || (pagingInfo.PageIndex == 0 && i == 1))
                 {
                     tag.AddCssClass("selected");
                 }
                 result.Append(tag.ToString());
             }
+            result.Append($"{StrSpace}{StrSpace}<span>(共{pagingInfo.RecordCount}条)</span>");
             return MvcHtmlString.Create(result.ToString());
         }
         public static MvcHtmlString GenreLinks(this UrlHelper helper,

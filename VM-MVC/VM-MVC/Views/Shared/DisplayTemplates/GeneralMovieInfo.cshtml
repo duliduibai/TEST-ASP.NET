@@ -14,10 +14,13 @@
             ProductName = Model.Name,
             ProductId = Model.ProductID
         });
+        <div id="productIndex">
+            @ViewBag.Index
+        </div>
         <a href="@detailUrl">
             <img src="@Url.Content("~/images/" + Model.Poster)" class="poster" alt="@Model.Name" />
         </a>
-        <div class="title">这就是电影名称 @Model.Name</div>
+        <div class="title">@Model.Name</div>
         <div>@Html.LabelFor(m => m.Genre): @Url.GenreLinks(Model.Genre)</div>
         <div>@Html.LabelFor(m => m.Starring): @Url.ActorLinks(Model.Starring)</div>
         <div>@Html.LabelFor(m => m.Director): @Model.Director</div>
@@ -25,7 +28,7 @@
         <div>@Html.LabelFor(m => m.ReleaseYear): @Model.ReleaseYear</div>
         <div>@Html.LabelFor(m => m.StoryAbstract): @Model.StoryAbstract</div>
         <div class="addToShoppingCart">
-            <form action="@Url.RouteUrl("ShoppingCart")" method="post">
+            <form action="@Url.RouteUrl("AddToCart")" method="post">
                 <div>
                     <span>
                         @Html.LabelFor(m => m.Price):

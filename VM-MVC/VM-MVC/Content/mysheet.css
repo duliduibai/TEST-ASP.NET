@@ -11,8 +11,8 @@ html {
 body {
     position: relative;
     min-height: 100%;
-    padding-top:20px;
-    padding-bottom:60px;
+    padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .page {
@@ -28,21 +28,29 @@ body {
     bottom: 0;
 }
 
-.footer span {
-    padding: 0 2px;
+    .footer span {
+        padding: 0 2px;
+    }
+
+.ShoppingCart {
+    padding-top: 20px;
 }
 
-.ShoppingCart table {
-    border: 1px solid #000
-}
-
-    .ShoppingCart table th {
+    .ShoppingCart table {
         border: 1px solid #000
     }
 
-    .ShoppingCart table td {
-        border: 1px solid #000
-    }
+        .ShoppingCart table th {
+            border: 1px solid #000
+        }
+
+        .ShoppingCart table td {
+            border: 1px solid #000
+        }
+
+.right {
+    text-align: right;
+}
 
 .textInput {
     display: inline-block;
@@ -93,10 +101,17 @@ body {
     transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
+.addNumber{
+    padding:0 2px 0 2px;
+    width:15px;
+    height:20px;
+    text-align:center;
+}
+
 
 table.myTable {
     font-family: verdana,arial,sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #333333;
     border-width: 2px;
     border-color: #a9c6c9;
@@ -105,14 +120,20 @@ table.myTable {
 
     table.myTable th {
         border-width: 1px;
-        padding: 10px 80px;
+        padding:10px 0px;
+        width:150px;
         border-style: solid;
         border-color: #a9c6c9;
     }
 
-    table.myTable removeCol {
-        text-align: center;
-    }
+#testTableID #MovieName {
+    width: 300px;
+    word-break:break-all;
+}
+
+table.myTable removeCol {
+    text-align: center;
+}
 
     table.myTable td {
         border-width: 1px;
@@ -192,6 +213,14 @@ table.myTable {
                 text-decoration: none;
             }
 
+#productIndex {
+    float: left;
+    width: 30px;
+    padding-right: 10px;
+    color: #979696;
+    text-align: left;
+}
+
 .poster {
     width: 180px;
     height: 181px;
@@ -200,7 +229,6 @@ table.myTable {
 }
 
 .products {
-    list-style-type: none;
     padding-top: 20px;
 }
 
@@ -211,7 +239,7 @@ table.myTable {
 .paging {
     text-align: center;
     font-size: 15px;
-    padding-top:5px;
+    padding-top: 5px;
 }
 
     .paging a {
@@ -221,10 +249,27 @@ table.myTable {
         text-decoration: none;
     }
 
+    .paging span {
+        color: #979696
+    }
+
 .selected {
     background-color: lightgreen;
+    pointer-events: none;
 }
 
 .paging a:hover {
     background-color: lightblue;
+}
+
+.ProductDetail {
+    padding-top: 20px;
+}
+
+#line {
+    border: dashed 0.5px;
+    color: lightgray;
+}
+.movieNumber{
+    width:10px;
 }
