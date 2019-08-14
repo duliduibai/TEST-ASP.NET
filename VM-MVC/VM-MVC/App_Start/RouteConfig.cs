@@ -90,7 +90,11 @@ namespace VM_MVC
                 name: "Login",
                 url: "Login",
                 defaults: new { controller = "Account", action = "Login" });
-
+            ///验证
+            routes.MapRoute(
+                name: "Authenticate"
+                , url: "Account/Authenticate"
+                , defaults: new { controller = "Account", action = "Authenticate" });
             ///注销登陆
             routes.MapRoute(
                 name: "Logout",

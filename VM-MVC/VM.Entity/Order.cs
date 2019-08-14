@@ -17,6 +17,7 @@ namespace VM.Entity
         [Key]
         public string OrderID { get; set; }
         public string UserName { get; set; }
+        public int UserId { get; set; }
         public DateTime OrderTime { get; set; }
 
     }

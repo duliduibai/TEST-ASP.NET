@@ -1,4 +1,7 @@
-﻿@using VM_MVC.Models;
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using VM_MVC.Models;
 @model MovieInfo
 @{
     ViewBag.Title = Model.Name;
@@ -42,7 +45,7 @@
                 <input type="hidden" name="ProductName" value="@Model.Name" />
             </form>
         </div>
-}
+    }
 </div>
 
 
