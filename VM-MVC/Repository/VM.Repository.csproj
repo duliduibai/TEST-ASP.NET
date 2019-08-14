@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201907060309584_OrderLine.Designer.cs">
       <DependentUpon>201907060309584_OrderLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908140911011_ChangedModelName.cs" />
+    <Compile Include="Migrations\201908140911011_ChangedModelName.Designer.cs">
+      <DependentUpon>201908140911011_ChangedModelName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="ProductRepository.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907060309584_OrderLine.resx">
       <DependentUpon>201907060309584_OrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908140911011_ChangedModelName.resx">
+      <DependentUpon>201908140911011_ChangedModelName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -25,5 +25,12 @@ namespace VM_MVC.Controllers
 
             return true;
         }
+
+        [HttpPost]
+        public bool Register(string userName, string password)
+        {
+
+            return true;
+        }
     }
 }

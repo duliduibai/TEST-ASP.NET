@@ -18,5 +18,8 @@ namespace VM.Repository
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderLine> OrderLines { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<AccountLine> AccountLines { get; set; }
     }
 }

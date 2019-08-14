@@ -55,3 +55,4 @@ C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\Repository\obj\Debug\VM.Repos
 C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\Repository\obj\Debug\VM.Repository.csproj.CopyComplete
 C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\Repository\obj\Debug\VM.Repository.dll
 C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\Repository\obj\Debug\VM.Repository.pdb
+C:\Users\bchen7\Desktop\VSCode\TEST-ASP.NET\VM-MVC\Repository\obj\Debug\VM.Repository.Migrations.ChangedModelName.resources
